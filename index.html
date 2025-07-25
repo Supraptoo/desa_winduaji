@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Winduaji - Kecamatan Paninggaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581281863883-2465415d2158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .manggis-card {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        }
+        
+        .kerupuk-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .pertanian-card {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .floating { 
+            animation-name: floating;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); } 
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-tree text-2xl"></i>
+                    <a href="#" class="text-xl font-bold">Desa Winduaji</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-yellow-300 transition">Beranda</a>
+                    <a href="#profile" class="hover:text-yellow-300 transition">Profil Desa</a>
+                    <a href="#potensi" class="hover:text-yellow-300 transition">Potensi</a>
+                    <a href="#umkm" class="hover:text-yellow-300 transition">UMKM</a>
+                    <a href="#gallery" class="hover:text-yellow-300 transition">Galeri</a>
+                    <a href="#contact" class="hover:text-yellow-300 transition">Kontak</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="hover:text-yellow-300 transition">Beranda</a>
+                    <a href="#profile" class="hover:text-yellow-300 transition">Profil Desa</a>
+                    <a href="#potensi" class="hover:text-yellow-300 transition">Potensi</a>
+                    <a href="#umkm" class="hover:text-yellow-300 transition">UMKM</a>
+                    <a href="#gallery" class="hover:text-yellow-300 transition">Galeri</a>
+                    <a href="#contact" class="hover:text-yellow-300 transition">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Desa Winduaji</h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-8">Kecamatan Paninggaran, Kabupaten Pekalongan</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10">Desa yang kaya akan potensi pertanian, UMKM kerupuk khas Paninggaran, dan buah manggis berkualitas tinggi.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#profile" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-info-circle mr-2"></i> Jelajahi Desa
+                </a>
+                <a href="#potensi" class="bg-transparent hover:bg-white hover:text-gray-900 border-2 border-white text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-gem mr-2"></i> Potensi Desa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Desa Section -->
+    <section id="profile" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Profil Desa Winduaji</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Desa Winduaji merupakan salah satu desa di Kecamatan Paninggaran yang memiliki kekayaan alam dan budaya yang beragam.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1581281863883-2465415d2158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Desa Winduaji" 
+                         class="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition duration-500">
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Selayang Pandang Desa Winduaji</h3>
+                    <p class="text-gray-600 mb-4">Desa Winduaji terletak di Kecamatan Paninggaran, Kabupaten Pekalongan, Jawa Tengah. Desa ini memiliki luas wilayah sekitar 250 hektar dengan topografi berbukit dan lembah yang subur.</p>
+                    <p class="text-gray-600 mb-6">Mayoritas penduduk Desa Winduaji bekerja sebagai petani dengan komoditas utama berupa padi, palawija, dan buah-buahan terutama manggis. Selain itu, UMKM kerupuk khas Paninggaran juga menjadi andalan ekonomi warga.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-users text-green-600 text-2xl mr-3"></i>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Jumlah Penduduk</p>
+                                    <p class="font-bold text-gray-800">2.500 Jiwa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marked-alt text-green-600 text-2xl mr-3"></i>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Luas Wilayah</p>
+                                    <p class="font-bold text-gray-800">250 Ha</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#potensi" class="inline-flex items-center text-green-700 font-semibold hover:text-green-800 transition">
+                        Lihat Potensi Desa <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Potensi Desa Section -->
+    <section id="potensi" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Potensi Unggulan Desa Winduaji</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Desa Winduaji memiliki beberapa potensi unggulan yang menjadi andalan dalam meningkatkan perekonomian masyarakat.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Manggis Card -->
+                <div class="manggis-card text-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <i class="fas fa-apple-alt text-4xl opacity-80"></i>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Unggulan</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Buah Manggis</h3>
+                        <p class="opacity-90 mb-4">Manggis Winduaji terkenal dengan rasa manis legit dan ukuran besar. Produktivitas mencapai 5 ton per hektar dengan kualitas ekspor.</p>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            <span>Panen: Juni - September</span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="#manggis" class="inline-flex items-center text-white font-semibold hover:underline">
+                            Pelajari lebih lanjut <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Kerupuk Card -->
+                <div class="kerupuk-card text-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <i class="fas fa-utensils text-4xl opacity-80"></i>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">UMKM</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Kerupuk Paninggaran</h3>
+                        <p class="opacity-90 mb-4">Kerupuk khas dengan cita rasa unik dan tekstur renyah. Diproduksi oleh 20 UMKM dengan omzet total Rp 500 juta per bulan.</p>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-industry mr-2"></i>
+                            <span>Produksi: 10.000 pack/bulan</span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="#umkm" class="inline-flex items-center text-white font-semibold hover:underline">
+                            Lihat produk <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Pertanian Card -->
+                <div class="pertanian-card text-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <i class="fas fa-tractor text-4xl opacity-80"></i>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Primadona</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Pertanian Organik</h3>
+                        <p class="opacity-90 mb-4">Lahan pertanian organik seluas 50 Ha dengan sistem irigasi terpadu. Menghasilkan padi, sayuran, dan buah-buahan berkualitas tinggi.</p>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-leaf mr-2"></i>
+                            <span>Produk: Padi, Cabai, Terong</span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="#pertanian" class="inline-flex items-center text-white font-semibold hover:underline">
+                            Eksplorasi <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manggis Detail Section -->
+    <section id="manggis" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/2 order-2 lg:order-1">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Buah Manggis Winduaji</h2>
+                    <p class="text-gray-600 mb-6">Manggis dari Desa Winduaji dikenal sebagai salah satu yang terbaik di Jawa Tengah. Dengan kandungan air yang tinggi dan rasa manis alami, manggis Winduaji banyak diminati pasar lokal maupun ekspor.</p>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Keunggulan Manggis Winduaji:</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Ukuran buah besar dengan diameter 6-8 cm</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Kulit buah tipis dengan daging tebal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Rasa manis alami dengan kadar gula 16-18 brix</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Bebas pestisida dengan sistem pertanian organik</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-6">
+                        <p class="text-gray-700">"Manggis Winduaji telah mendapatkan sertifikasi Prima 3 dari Kementerian Pertanian dan menjadi komoditas unggulan ekspor ke Singapura dan Malaysia."</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" 
+                             alt="Buah Manggis" 
+                             class="w-full rounded-lg shadow-xl hover:shadow-2xl transition duration-500">
+                        <div class="absolute -bottom-5 -right-5 bg-white p-3 rounded-lg shadow-lg">
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-tags text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500">Harga Petani</p>
+                                    <p class="font-bold text-green-600">Rp 25.000/kg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UMKM Kerupuk Section -->
+    <section id="umkm" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">UMKM Kerupuk Paninggaran</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Kerupuk khas Paninggaran telah menjadi oleh-oleh wajib bagi wisatawan yang berkunjung ke Desa Winduaji.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1630919384076-7c8e8550b9d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                 alt="Kerupuk Original" 
+                                 class="w-full h-48 object-cover">
+                            <div class="p-4 bg-white">
+                                <h3 class="font-bold text-gray-800">Kerupuk Original</h3>
+                                <p class="text-gray-600 text-sm mb-2">Rasa gurih alami</p>
+                                <p class="text-green-600 font-bold">Rp 15.000/pack</p>
+                            </div>
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=692&q=80" 
+                                 alt="Kerupuk Pedas" 
+                                 class="w-full h-48 object-cover">
+                            <div class="p-4 bg-white">
+                                <h3 class="font-bold text-gray-800">Kerupuk Pedas</h3>
+                                <p class="text-gray-600 text-sm mb-2">Level pedas 1-5</p>
+                                <p class="text-green-600 font-bold">Rp 18.000/pack</p>
+                            </div>
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1582291725351-8d37a8511d6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                 alt="Kerupuk Balado" 
+                                 class="w-full h-48 object-cover">
+                            <div class="p-4 bg-white">
+                                <h3 class="font-bold text-gray-800">Kerupuk Balado</h3>
+                                <p class="text-gray-600 text-sm mb-2">Rasa pedas manis</p>
+                                <p class="text-green-600 font-bold">Rp 20.000/pack</p>
+                            </div>
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                 alt="Kerupuk Udang" 
+                                 class="w-full h-48 object-cover">
+                            <div class="p-4 bg-white">
+                                <h3 class="font-bold text-gray-800">Kerupuk Udang</h3>
+                                <p class="text-gray-600 text-sm mb-2">Dengan ekstrak udang</p>
+                                <p class="text-green-600 font-bold">Rp 25.000/pack</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Proses Pembuatan Kerupuk</h3>
+                    <p class="text-gray-600 mb-6">Kerupuk Paninggaran dibuat dengan bahan-bahan pilihan dan proses tradisional yang telah turun temurun. Bahan utama berupa tepung tapioka dengan campuran bumbu rahasia yang memberikan cita rasa khas.</p>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-mortar-pestle text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Pencampuran Bahan</h4>
+                                <p class="text-gray-600 text-sm">Tepung tapioka dicampur dengan bumbu rahasia dan bahan lainnya hingga membentuk adonan yang kenyal.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-utensils text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Pembentukan dan Pengukusan</h4>
+                                <p class="text-gray-600 text-sm">Adonan dibentuk sesuai varian kemudian dikukus hingga matang sempurna.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-sun text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Pengeringan dan Pengemasan</h4>
+                                <p class="text-gray-600 text-sm">Kerupuk dikeringkan dibawah sinar matahari selama 2-3 hari kemudian dikemas dengan standar higienis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition transform hover:scale-105">
+                        <i class="fas fa-shopping-cart mr-2"></i> Pesan Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pertanian Section -->
+    <section id="pertanian" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Pertanian Organik Winduaji</h2>
+                    <p class="text-gray-600 mb-6">Desa Winduaji mengembangkan sistem pertanian organik yang ramah lingkungan dengan memanfaatkan pupuk kompos dari kotoran ternak dan limbah pertanian. Sistem ini telah meningkatkan produktivitas sekaligus menjaga kelestarian alam.</p>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Komoditas Pertanian:</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Padi Organik</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Cabai Merah</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Terong Ungu</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Kacang Panjang</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Tomat</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Kangkung</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-chart-line text-green-600 text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">Peningkatan Produktivitas</h4>
+                                <p class="text-gray-600">Sejak beralih ke sistem organik, produktivitas padi meningkat 20% dengan biaya produksi yang lebih rendah 15%.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Pertanian Organik" 
+                             class="w-full rounded-lg shadow-xl hover:shadow-2xl transition duration-500">
+                        <div class="absolute -bottom-5 -left-5 bg-white p-4 rounded-lg shadow-lg w-64">
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-seedling text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500">Luas Lahan Organik</p>
+                                    <p class="font-bold text-green-600">50 Hektar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Galeri Desa Winduaji</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Potret keindahan dan aktivitas masyarakat Desa Winduaji.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1494&q=80" 
+                         alt="Panen Manggis" 
+                         class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <h3 class="text-white text-xl font-bold">Panen Manggis</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Pembuatan Kerupuk" 
+                         class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <h3 class="text-white text-xl font-bold">Pembuatan Kerupuk</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80" 
+                         alt="Pemandangan Desa" 
+                         class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <h3 class="text-white text-xl font-bold">Pemandangan Desa</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                         alt="Pasar Desa" 
+                         class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <h3 class="text-white text-xl font-bold">Pasar Desa</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Sawah Terasering" 
+                         class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <h3 class="text-white text-xl font-bold">Sawah Terasering</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1471193945509-9ad07a3b4c41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Kegiatan Warga" 
+                         class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <h3 class="text-white text-xl font-bold">Kegiatan Warga</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-green-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Hubungi Kami</h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto">Untuk informasi lebih lanjut tentang Desa Winduaji, produk UMKM, atau potensi pertanian, silakan hubungi kami melalui form berikut.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Nama Lengkap</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-green-700 border border-green-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Masukkan nama Anda">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-green-700 border border-green-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Masukkan email Anda">
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2 font-medium">Subjek</label>
+                            <select id="subject" class="w-full px-4 py-3 rounded-lg bg-green-700 border border-green-600 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                                <option value="">Pilih subjek</option>
+                                <option value="umkm">Informasi UMKM Kerupuk</option>
+                                <option value="manggis">Pembelian Manggis</option>
+                                <option value="pertanian">Kerjasama Pertanian</option>
+                                <option value="wisata">Kunjungan Wisata</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Pesan</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-green-700 border border-green-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Tulis pesan Anda disini"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 px-6 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold rounded-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i> Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-green-900 bg-opacity-50 p-8 rounded-xl h-full">
+                        <h3 class="text-2xl font-bold mb-6">Informasi Kontak</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-yellow-500 text-green-900 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Alamat Kantor Desa</h4>
+                                    <p class="text-green-200">Jl. Raya Paninggaran No. 123, Desa Winduaji, Kec. Paninggaran, Kab. Pekalongan, Jawa Tengah 51164</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-yellow-500 text-green-900 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Telepon</h4>
+                                    <p class="text-green-200">(0285) 1234567</p>
+                                    <p class="text-green-200">0812-3456-7890 (WhatsApp)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-yellow-500 text-green-900 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Email</h4>
+                                    <p class="text-green-200">desa.winduaji@paninggaran.go.id</p>
+                                    <p class="text-green-200">umkm.winduaji@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-yellow-500 text-green-900 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Jam Operasional</h4>
+                                    <p class="text-green-200">Senin - Jumat: 08.00 - 16.00 WIB</p>
+                                    <p class="text-green-200">Sabtu: 08.00 - 13.00 WIB</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4">Media Sosial</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-green-700 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-green-700 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-green-700 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="bg-green-700 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.123456789012!2d109.12345678901234!3d-7.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDcnMjQuNCJTIDEwOcKwMDcnMjQuNCJF!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-tree mr-2"></i> Desa Winduaji
+                    </h3>
+                    <p class="text-gray-400">Desa yang kaya akan potensi pertanian, UMKM kerupuk khas Paninggaran, dan buah manggis berkualitas tinggi.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-yellow-400 transition">Beranda</a></li>
+                        <li><a href="#profile" class="text-gray-400 hover:text-yellow-400 transition">Profil Desa</a></li>
+                        <li><a href="#potensi" class="text-gray-400 hover:text-yellow-400 transition">Potensi Desa</a></li>
+                        <li><a href="#umkm" class="text-gray-400 hover:text-yellow-400 transition">UMKM Kerupuk</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-yellow-400 transition">Galeri</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Produk Unggulan</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Kerupuk Original</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Kerupuk Pedas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Kerupuk Balado</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Buah Manggis</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Pertanian Organik</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Berlangganan</h3>
+                    <p class="text-gray-400 mb-4">Dapatkan informasi terbaru tentang Desa Winduaji langsung ke email Anda.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email Anda" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-900">
+                        <button class="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded-r-lg text-gray-900 font-semibold transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2023 Desa Winduaji, Kecamatan Paninggaran. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-green-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
